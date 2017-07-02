@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Fluke 10am to 3pm",
+      "description": "Mon thru Fri",
+      "published": true
+    },
+    {
+      "id": 2,
+      "name": "Sea Bass 5pm to 9pm",
+      "description": "Mon tues weds",
+      "published": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "jleace",
+      "name": "jleace",
+      "email": "wczekaj@msn.com",
+      "level": "admin"
+    },
+    {
+      "id": 2,
+      "username": "jjtape",
+      "name": "Joe",
+      "email": "joe@websbyjoe.org",
+      "level": "superuser"
+    }
+  ]
+}
