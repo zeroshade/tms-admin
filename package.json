@@ -1,21 +1,29 @@
 {
-  "name": "test-admin",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "admin-on-rest": "^1.2.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "json-server": "json-server --watch db.json"
-  },
-  "devDependencies": {
-    "json-server": "^0.10.3"
-  }
+    "name": "tms-admin",
+    "version": "0.1.0",
+    "private": true,
+    "author": {
+	"name": "Zeroshade",
+	"email": "zotthewizard@gmail.com"
+    },
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/zeroshade/tms-admin"
+    },
+    "dependencies": {
+	"admin-on-rest": "^1.2.0",
+	"react": "^15.6.1",
+	"react-dom": "^15.6.1",
+	"react-scripts": "1.0.10"
+    },
+    "scripts": {
+	"start": "react-scripts start",
+	"build": "react-scripts build",
+	"test": "react-scripts test --env=jsdom",
+	"eject": "react-scripts eject",
+	"json-server": "json-server --watch db.json"
+    },
+    "devDependencies": {
+	"json-server": "^0.10.3"
+    }
 }
