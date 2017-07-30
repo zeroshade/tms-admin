@@ -4,13 +4,33 @@
       "id": 1,
       "name": "Fluke 10am to 3pm",
       "description": "Mon thru Fri",
-      "published": true
+      "published": true,
+      "sched": "",
+      "sex": "M"
     },
     {
       "id": 2,
       "name": "Sea Bass 5pm to 9pm",
       "description": "Mon tues weds",
-      "published": true
+      "published": true,
+      "sched": "",
+      "sex": "F"
+    },
+    {
+      "sched": [
+        {
+          "id": 0,
+          "time": "2017-07-05T04:00:29.530Z",
+          "freq": "ev",
+          "days": [
+            "0",
+            "5"
+          ]
+        }
+      ],
+      "name": "Foobar",
+      "description": "Tester",
+      "id": 3
     }
   ],
   "users": [

@@ -1,5 +1,6 @@
 import React from 'react';
-import { List, Datagrid, TextField, Create, BooleanField, SimpleForm, EditButton, TextInput, LongTextInput } from 'admin-on-rest';
+import { List, Datagrid, TextField, Create, BooleanField, SimpleForm, EditButton, TextInput, LongTextInput, DeleteButton } from 'admin-on-rest';
+import SchedList from './schedArrayInput';
 
 export const ProductList = (props) => (
     <List {...props}>
@@ -8,6 +9,7 @@ export const ProductList = (props) => (
         <TextField source="description" />
         <BooleanField source="published" />
         <EditButton />
+        <DeleteButton />
       </Datagrid>
     </List>
 );
@@ -17,6 +19,8 @@ export const ProductCreate = (props) => (
     <SimpleForm submitOnEnter={false}>
       <TextInput source="name" />
       <LongTextInput source="description" />
+
+      <SchedList source="sched" />
     </SimpleForm>
   </Create>
 );
