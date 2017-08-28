@@ -11,7 +11,7 @@
 						"url": "https://github.com/zeroshade/tms-admin"
 			},
 			"dependencies": {
-						"admin-on-rest": "^1.2.0",
+						"admin-on-rest": "^1.2.2",
 						"lodash": "^4.17.4",
 						"moment": "^2.18.1",
 						"moment-timezone": "^0.5.13",
@@ -29,7 +29,7 @@
 						"json-server": "json-server --watch db.json"
 			},
 			"devDependencies": {
-						"babel-runtime": "^6.18.0",
+						"babel-runtime": "^6.25.0",
 						"json-server": "^0.10.3"
 			}
 }

@@ -1,36 +1,79 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Fluke 10am to 3pm",
-      "description": "Mon thru Fri",
+      "sched": [
+        {
+          "id": 0,
+          "time": "2017-08-12T16:55:46.345Z",
+          "freq": "ev",
+          "days": [
+            "mon",
+            "thu",
+            "sat"
+          ],
+          "start": "2017-08-14T04:00:00.000Z",
+          "end": "2017-08-31T04:00:00.000Z"
+        }
+      ],
+      "exclude": [
+        {
+          "curDate": "2017-08-12T16:55:51.631Z"
+        }
+      ],
+      "name": "Super Test",
+      "description": "Foobar",
       "published": true,
-      "sched": "",
-      "sex": "M"
-    },
-    {
-      "id": 2,
-      "name": "Sea Bass 5pm to 9pm",
-      "description": "Mon tues weds",
-      "published": true,
-      "sched": "",
-      "sex": "F"
+      "tickets": 50,
+      "show_tickets": true,
+      "id": 5
     },
     {
       "sched": [
         {
           "id": 0,
-          "time": "2017-07-05T04:00:29.530Z",
+          "time": "2017-08-12T17:39:50.816Z",
           "freq": "ev",
           "days": [
-            "0",
-            "5"
-          ]
+            "tue",
+            "fri",
+            "sat"
+          ],
+          "tktid": 1,
+          "start": "2017-08-10T04:00:00.000Z",
+          "end": "2017-08-31T04:00:00.000Z"
+        },
+        {
+          "id": 1,
+          "freq": "ev",
+          "days": [
+            "mon",
+            "wed",
+            "sat"
+          ],
+          "time": "2017-08-27T16:00:47.155Z",
+          "start": "2017-08-01T04:00:00.000Z",
+          "end": "2017-08-31T04:00:00.000Z",
+          "tktid": 1
+        },
+        {
+          "id": 3,
+          "freq": "ev",
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "thu"
+          ],
+          "time": "2017-08-28T03:57:28.677Z",
+          "start": "2017-08-28T03:57:15.512Z",
+          "end": "2017-08-31T04:00:00.000Z",
+          "tktid": 2
         }
       ],
-      "name": "Foobar",
-      "description": "Tester",
-      "id": 3
+      "tickets": 5,
+      "name": "Super",
+      "id": 6,
+      "published": true
     }
   ],
   "users": [
@@ -47,6 +90,22 @@
       "name": "Joe",
       "email": "joe@websbyjoe.org",
       "level": "superuser"
+    }
+  ],
+  "tickets": [
+    {
+      "name": "Testing",
+      "adult": 20.5,
+      "child": 15.25,
+      "senior": 0,
+      "id": 1
+    },
+    {
+      "name": "Test 2",
+      "adult": 10,
+      "child": 7.5,
+      "senior": 2,
+      "id": 2
     }
   ]
 }
