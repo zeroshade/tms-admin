@@ -48,8 +48,8 @@ export class EmbeddedArrayInput extends Component {
         const removeElement = () => fields.remove(index);
         return (
             <div className="EmbeddedArrayInputItemContainer">
-                <div style={styles.container}>
-                    {
+              <div style={styles.container}>
+                {
                         React.Children.map(inputs, input => input && (
                             <div key={input.props.source} className={`aor-input-${input.props.source}`} style={input.props.style}>
                                 <EmbeddedArrayInputFormField input={input} prefix={member} />

@@ -73,7 +73,18 @@
       "tickets": 5,
       "name": "Super",
       "id": 6,
-      "published": true
+      "published": true,
+      "exclude": [
+        {
+          "curDate": "2017-08-09T04:00:00.000Z"
+        },
+        {
+          "curDate": "2017-08-10T04:00:00.000Z"
+        },
+        {
+          "curDate": "2017-08-15T04:00:00.000Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -106,6 +117,13 @@
       "child": 7.5,
       "senior": 2,
       "id": 2
+    }
+  ],
+  "config": [
+    {
+      "id": "data",
+      "paypal_email": "zotthewizard@gmail.com",
+      "notif_email": "zotthewizard@gmail.com"
     }
   ]
 }

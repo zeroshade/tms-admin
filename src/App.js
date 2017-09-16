@@ -5,6 +5,7 @@ import { ProductList, ProductCreate, ProductEdit } from './products';
 import { TicketList, TicketCreate, TicketEdit } from './tickets';
 import { UserList  } from './users';
 
+import configReducer, { configSaga } from './configReducer';
 import customRoutes from './customRoutes';
 import Menu from './menu';
 
@@ -16,7 +17,7 @@ const CustomDelete = (props) => (
 );
 
 const App = () => (
-    <Admin restClient={restClient} customRoutes={customRoutes} menu={Menu}>
+    <Admin customReducers={{config: configReducer }} customSagas={[ configSaga ]} restClient={restClient} customRoutes={customRoutes} menu={Menu}>
       <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} remove={CustomDelete} />
       <Resource name="users" list={UserList} />
       <Resource name="tickets" list={TicketList} create={TicketCreate} edit={TicketEdit} />

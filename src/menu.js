@@ -4,13 +4,13 @@ import { Menu } from 'admin-on-rest';
 import ViewListIcon from 'material-ui/svg-icons/action/view-list';
 
 export default ({ resources, onMenuTap, logout }) => {
-
+  const onTapMenu = onMenuTap || (() => {});
   return (
     <div>
-      <Menu resources={resources} logout={logout} onMenuTap={onMenuTap} />
+      <Menu resources={resources} onMenuTap={onTapMenu} />
       <MenuItemLink to="/config" primaryText="Configuration"
-        leftIcon={<ViewListIcon />}
-        onTouchTap={onMenuTap || (() => {}) } />
+        leftIcon={<ViewListIcon />} onTouchTap={onTapMenu} />
+      {logout}
     </div>
   );
 }

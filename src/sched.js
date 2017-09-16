@@ -7,6 +7,7 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import { FieldArray } from 'redux-form';
 import DatePicker from 'material-ui/DatePicker';
 import Moment from 'react-moment';
+import { TblWrap } from './schedArrayInput';
 
 class DateArrayInput extends Component {
   state = {
@@ -39,15 +40,19 @@ class DateArrayInput extends Component {
 export class DateTable extends Component {
   renderList = ({ fields }) => {
     const { style, elStyle, superTitle } = this.props;
-    console.log(elStyle);
+
     const cols = [
-      {title: 'Date', tbl: (el) => <Moment date={el.curDate} format='MMMM Do' /> }
+      {title: 'Date', style: {} }
     ];
 
     return (
       <div className="dateTbl" style={style}>
         <DateArrayInput onAdd={(data) => { fields.push(data) }} elStyle={elStyle} />
-        <SchedTable fields={fields} cols={cols} elStyle={elStyle} hideIfEmpty={true} superHeader={superTitle} />
+        <SchedTable fields={fields} cols={cols} elStyle={elStyle} hideIfEmpty={true} superHeader={superTitle}>
+          <TblWrap propMap={{date: 'curDate'}}>
+            <Moment format='MMMM Do' />
+          </TblWrap>
+        </SchedTable>
       </div>
     )
   }
@@ -81,4 +86,3 @@ const Sched = ({input, meta: { touched, error } }) => (
 Sched.defaultProps = {
   addField: true
 }
-// export default Sched;

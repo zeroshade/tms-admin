@@ -99,7 +99,7 @@ export const SchedTable = ({ fields, cols, hideIfEmpty, superHeader, elStyle, ch
     <TableBody displayRowCheckbox={false}>
       { fields.map( (name, index) => (
         <TableRow key={index}>
-          { children.map( (x, cidx) => {
+          { Array.isArray(children) && children.map( (x, cidx) => {
             const elem = React.cloneElement(x, {rec: fields.get(index)});
             return (
               <TableRowColumn key={cidx} style={cols[cidx].style}>
@@ -107,6 +107,11 @@ export const SchedTable = ({ fields, cols, hideIfEmpty, superHeader, elStyle, ch
               </TableRowColumn>
             )
           }) }
+          { !Array.isArray(children) && (
+            <TableRowColumn style={cols[0].style}>
+              {React.cloneElement(children, {rec: fields.get(index)})}
+            </TableRowColumn>
+          )}
           <TableRowColumn width='125px'>
             <FlatButton primary label="Remove"
               icon={<ActionDeleteIcon/>}
@@ -249,7 +254,6 @@ class SchedList extends Component {
 
   renderList = ({ fields, meta }) => {
     const { elStyle, refs } = this.props;
-    console.log(fields);
 
     const cols = [
       {title: 'Start', style: styles.tblcol},

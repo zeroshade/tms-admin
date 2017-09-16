@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Edit, Create, Datagrid, EditButton, DeleteButton } from 'admin-on-rest';
+import { List, Edit, Create, Datagrid, EditButton } from 'admin-on-rest';
 import { TextField, NumberField } from 'admin-on-rest';
 import { SimpleForm, TextInput, NumberInput } from 'admin-on-rest';
 
@@ -11,7 +11,6 @@ export const TicketList = (props) => (
       <NumberField source='child' options={{ style: 'currency', currency: 'USD'}} />
       <NumberField source='senior' options={{ style: 'currency', currency: 'USD'}} />
       <EditButton />
-
     </Datagrid>
   </List>
 )
